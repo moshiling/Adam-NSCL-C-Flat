@@ -1,0 +1,109 @@
+Files already downloaded and verified
+Files already downloaded and verified
+split_boundaries: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+{'1': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], '2': [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], '3': [20, 21, 22, 23, 24, 25, 26, 27, 28, 29], '4': [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], '5': [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], '6': [50, 51, 52, 53, 54, 55, 56, 57, 58, 59], '7': [60, 61, 62, 63, 64, 65, 66, 67, 68, 69], '8': [70, 71, 72, 73, 74, 75, 76, 77, 78, 79], '9': [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], '10': [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]}
+{'model_lr': 0.0001, 'momentum': 0, 'model_weight_decay': 5e-05, 'schedule': [1], 'model_type': 'resnet', 'model_name': 'resnet18', 'model_weights': None, 'out_dim': {'1': 10, '2': 10, '3': 10, '4': 10, '5': 10, '6': 10, '7': 10, '8': 10, '9': 10, '10': 10}, 'model_optimizer': 'Adam', 'print_freq': 20.0, 'gpu': True, 'with_head': False, 'reset_model_opt': True, 'reg_coef': 100.0, 'head_lr': 0.001, 'svd_lr': 5e-05, 'bn_lr': 0.0005, 'svd_thres': 10.0, 'gamma': 0.5, 'dataset_name': 'CIFAR100_10_10', 'use_cflat': True, 'cflat_rho': 0.2, 'cflat_lambda': 0.2, 'cflat_eps': 1e-12, 'cflat_adaptive': False, 'cflat_bn_mode': 'disable_running_stats', 'cflat_debug': False, 'max_train_batches': 0, 'max_eval_batches': 0}
+#param of model:11218340
+Task order: ['1', '2']
+====================== 1 =======================
+Epoch:0
+LR: 0.0001
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+[0/40]	1.5934 (1.5934)	0.0858 (0.0858)	2.342 (2.342)	12.50 (12.50)
+[20/40]	0.1271 (0.1980)	0.0334 (0.0374)	2.026 (2.124)	29.69 (24.33)
+[39/40]	0.1819 (0.1679)	0.0034 (0.0369)	2.305 (2.044)	25.00 (27.82)
+ * Train Acc 27.820
+ * Val Acc 38.000, Total time 0.32
+ * Val loss 1.792, Total time 0.00
+Classifier Optimizer is reset!
+reserving basis 6/27; cond: 607495.5625, radio:2.9578275643871166e-05
+reserving basis 125/576; cond: 33527948.0, radio:1.76985195139423e-05
+reserving basis 211/576; cond: 3330473.0, radio:0.0002842170652002096
+reserving basis 227/576; cond: 6835863.0, radio:0.00014217832358554006
+reserving basis 276/576; cond: 1699088.5, radio:0.0006410107016563416
+reserving basis 276/576; cond: 4459195.0, radio:0.00023525956203229725
+reserving basis 639/1152; cond: 3264195.75, radio:0.000729688792489469
+reserving basis 38/64; cond: 58437.6015625, radio:0.0019911015406250954
+reserving basis 671/1152; cond: 2485915.25, radio:0.0009629172855056822
+reserving basis 744/1152; cond: 1435085.625, radio:0.0017407148843631148
+reserving basis 496/1152; cond: 5938479.0, radio:0.0003082024632021785
+reserving basis 1/2304; cond: 47639535616.0, radio:1.550457505439251e-11
+reserving basis 93/128; cond: 76935.7578125, radio:0.0033626393415033817
+reserving basis 1/2304; cond: 52823285760.0, radio:1.3064406327589762e-11
+reserving basis 4/2304; cond: 3060706816.0, radio:3.779193402664305e-09
+reserving basis 8/2304; cond: 1151977390080.0, radio:2.6635462932467213e-11
+reserving basis 8/4608; cond: 2668351455232.0, radio:1.1458284841781019e-11
+reserving basis 133/256; cond: 761835.0, radio:0.0005362319061532617
+reserving basis 1/4608; cond: 76479174017024.0, radio:6.428007675836692e-15
+reserving basis 5/4608; cond: 12549907021824.0, radio:1.1343847952996478e-12
+computing EWC
+validation split name: 1
+ * Val Acc 38.000, Total time 0.28
+ * Val loss 1.792, Total time 0.00
+**************************************************
+training split name: 1
+ * Val Acc 36.360, Total time 1.87
+ * Val loss 1.870, Total time 0.00
+**************************************************
+====================== 2 =======================
+Epoch:0
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+[0/40]	0.3060 (0.3060)	0.0357 (0.0357)	2.313 (2.313)	7.03 (7.03)
+[20/40]	0.1378 (0.1737)	0.0329 (0.0347)	2.221 (2.264)	16.41 (14.40)
+[39/40]	0.1324 (0.1584)	0.0026 (0.0337)	2.002 (2.228)	37.50 (16.80)
+ * Train Acc 16.800
+ * Val Acc 23.000, Total time 0.21
+ * Val loss 2.158, Total time 0.00
+Classifier Optimizer is reset!
+reserving basis 6/27; cond: 779757.875, radio:2.53653615800431e-05
+reserving basis 119/576; cond: 32815900.0, radio:1.7392931113136e-05
+reserving basis 208/576; cond: 3086298.5, radio:0.0003017857379745692
+reserving basis 230/576; cond: 5942078.0, radio:0.00016366383351851255
+reserving basis 266/576; cond: 1642797.375, radio:0.0006534903077408671
+reserving basis 282/576; cond: 3708384.25, radio:0.00029234946123324335
+reserving basis 654/1152; cond: 2663675.5, radio:0.0009309655870310962
+reserving basis 39/64; cond: 49729.80859375, radio:0.002467468613758683
+reserving basis 693/1152; cond: 1985765.5, radio:0.0012546207290142775
+reserving basis 765/1152; cond: 1182316.0, radio:0.002210981212556362
+reserving basis 683/1152; cond: 2613616.25, radio:0.0008896712679415941
+reserving basis 1062/2304; cond: 6771247.0, radio:0.0005461606197059155
+reserving basis 94/128; cond: 64267.33203125, radio:0.003981403075158596
+reserving basis 1039/2304; cond: 7424484.5, radio:0.0004569452430587262
+reserving basis 1091/2304; cond: 5905557.5, radio:0.0005699070170521736
+reserving basis 17/2304; cond: 252465496064.0, radio:2.125008363718095e-10
+reserving basis 8/4608; cond: 2265407291392.0, radio:8.077226387737113e-12
+reserving basis 172/256; cond: 342783.8125, radio:0.0013352459063753486
+reserving basis 6/4608; cond: 3244221530112.0, radio:3.781567073368741e-12
+reserving basis 7/4608; cond: 4662743793664.0, radio:3.5288941907518634e-12
+computing EWC
+validation split name: 1
+ * Val Acc 34.800, Total time 0.28
+ * Val loss 1.820, Total time 0.00
+**************************************************
+training split name: 1
+ * Val Acc 34.440, Total time 1.86
+ * Val loss 1.883, Total time 0.00
+**************************************************
+validation split name: 2
+ * Val Acc 23.000, Total time 0.26
+ * Val loss 2.158, Total time 0.00
+**************************************************
+training split name: 2
+ * Val Acc 21.560, Total time 1.67
+ * Val loss 2.162, Total time 0.00
+**************************************************
+OrderedDict([('1', OrderedDict([('1', 38.0), ('2', 34.8)])), ('2', OrderedDict([('2', 23.0)]))])
+Task 1 average acc: 38.0
+Task 1 backward transfer: 0
+Task 2 average acc: 28.9
+Task 2 backward transfer: -3.200000000000003
+===Summary of experiment repeats: 1 / 1 ===
+The last avg acc of all repeats: [28.9]
+The last bwt of all repeats: [-3.2]
+acc mean: 28.9 acc std: 0.0
+bwt mean: -3.200000000000003 bwt std: 0.0

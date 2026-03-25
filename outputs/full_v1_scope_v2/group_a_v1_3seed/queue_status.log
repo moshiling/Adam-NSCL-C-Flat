@@ -1,0 +1,13 @@
+2026-03-23T16:03:33+08:00 queue_started gpu=0
+2026-03-23T16:03:33+08:00 START baseline_repeat3
+2026-03-23T18:01:54+08:00 queue_started gpu=0
+2026-03-23T18:01:54+08:00 RESTART baseline_repeat3 incomplete_previous_run
+2026-03-24T00:34:52+08:00 DONE baseline_repeat3
+2026-03-24T07:35:34+08:00 queue_started gpu=0
+2026-03-24T07:35:34+08:00 SKIP baseline_repeat3 existing_final_metrics
+2026-03-24T07:35:34+08:00 START v1_repeat3
+2026-03-24T11:09:58+08:00 queue_started gpu=0
+2026-03-24T11:09:58+08:00 SKIP baseline_repeat3 existing_final_metrics
+2026-03-24T11:09:59+08:00 RESTART v1_repeat3 incomplete_previous_run
+2026-03-24T16:15:20+08:00 RESTART v1_repeat3 user_requested_restart
+2026-03-24T22:29:44+08:00 RESTART v1_repeat3 restart_after_cwd_data_path_failure

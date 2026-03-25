@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd /home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main
+CUDA_VISIBLE_DEVICES=2 /home/moshiling/miniconda3/envs/torch118/bin/python -u /home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 30 60 80 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 10 --use_pls_cflat --pls_cflat_mode layer_selective --cflat_rho 0.02 --pls_cflat_debug --repeat 1 --seed 0 --cflat_target_scope deep_plus_classifier --deep_layer_rule last_block --cflat_lambda 0.01 --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/selective_g0_smalllambda_round/stage1_seed0/last_block_plus_classifier_lambda001

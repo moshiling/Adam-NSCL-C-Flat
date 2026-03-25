@@ -1,0 +1,23 @@
+2026-03-25T12:51:22+08:00 queue_started group=A gpu=2
+2026-03-25T12:51:22+08:00 START last_block_plus_classifier_lambda0 gpu=2
+2026-03-25T12:51:22+08:00 FAIL last_block_plus_classifier_lambda0 exit_code=1
+2026-03-25T12:51:22+08:00 START last_block_plus_classifier_lambda0005 gpu=2
+2026-03-25T12:51:22+08:00 FAIL last_block_plus_classifier_lambda0005 exit_code=1
+2026-03-25T12:51:22+08:00 START last_block_plus_classifier_lambda001 gpu=2
+2026-03-25T12:51:22+08:00 FAIL last_block_plus_classifier_lambda001 exit_code=1
+2026-03-25T12:51:22+08:00 queue_finished group=A gpu=2
+2026-03-25T12:52:31+08:00 queue_started group=A gpu=2
+2026-03-25T12:52:31+08:00 START last_block_plus_classifier_lambda0 gpu=2
+2026-03-25T12:52:59+08:00 queue_started group=B gpu=5
+2026-03-25T12:52:59+08:00 START deep_last_block_lambda0 gpu=5
+2026-03-25T13:08:08+08:00 FAIL deep_last_block_lambda0 exit_code=1
+2026-03-25T13:08:08+08:00 START deep_last_block_lambda0005 gpu=5
+2026-03-25T13:13:29+08:00 MIGRATE group=B from_gpu=5 to_gpu=4 reason=oom_in_update_optim_transforms
+2026-03-25T13:14:07+08:00 queue_started group=B gpu=4
+2026-03-25T13:14:07+08:00 START deep_last_block_lambda0 gpu=4
+2026-03-25T14:59:41+08:00 DONE last_block_plus_classifier_lambda0
+2026-03-25T14:59:41+08:00 START last_block_plus_classifier_lambda0005 gpu=2
+2026-03-25T16:46:41+08:00 DONE deep_last_block_lambda0
+2026-03-25T16:46:41+08:00 START deep_last_block_lambda0005 gpu=4
+2026-03-25T17:56:20+08:00 DONE last_block_plus_classifier_lambda0005
+2026-03-25T17:56:20+08:00 START last_block_plus_classifier_lambda001 gpu=2

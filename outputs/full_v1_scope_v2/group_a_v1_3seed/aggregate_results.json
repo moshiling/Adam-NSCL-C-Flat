@@ -1,0 +1,29 @@
+{
+  "group_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_a_v1_3seed",
+  "runs": [
+    {
+      "acc_mean": 73.19666666666666,
+      "acc_std": 0.19770910168449474,
+      "bwt_mean": -1.3111111111111091,
+      "bwt_std": 0.3532331560760405,
+      "command": "/home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 30 60 80 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 3 --seed 0 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 10 --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_a_v1_3seed/baseline_repeat3",
+      "metrics_path": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_a_v1_3seed/baseline_repeat3/final_metrics.json",
+      "name": "baseline_repeat3",
+      "repeat_count": 3,
+      "repeat_seeds": [
+        0,
+        1,
+        2
+      ],
+      "run_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_a_v1_3seed/baseline_repeat3",
+      "status": "completed",
+      "time_mean": 7853.005003452301,
+      "time_std": 419.2803796473527
+    },
+    {
+      "name": "v1_repeat3",
+      "run_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_a_v1_3seed/v1_repeat3",
+      "status": "missing"
+    }
+  ]
+}

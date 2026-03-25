@@ -1,0 +1,37 @@
+{
+  "acc_mean": 3.90625,
+  "acc_std": 0.0,
+  "avg_final_acc": [
+    3.90625
+  ],
+  "bwt_mean": 0.0,
+  "bwt_std": 0.0,
+  "command": "main.py --schedule 1 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 128 --model_name resnet18 --model_type resnet --workers 0 --print_freq 1 --max_tasks 1 --max_train_batches 2 --max_eval_batches 1 --seed 0 --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/cflat_official_alignment/static_checks/baseline",
+  "final_bwt": [
+    0.0
+  ],
+  "repeat_metrics": [
+    {
+      "acc_table": {
+        "1": {
+          "1": 3.90625
+        }
+      },
+      "avg_acc_history": [
+        3.90625
+      ],
+      "bwt_history": [
+        0
+      ],
+      "final_avg_acc": 3.90625,
+      "final_bwt": 0.0,
+      "repeat_index": 0,
+      "task_names": [
+        "1"
+      ],
+      "wall_clock_seconds": 37.709479570388794
+    }
+  ],
+  "seed": 0,
+  "use_cflat": false
+}

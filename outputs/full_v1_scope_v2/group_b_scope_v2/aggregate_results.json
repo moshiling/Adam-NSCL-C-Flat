@@ -1,0 +1,78 @@
+{
+  "group_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2",
+  "runs": [
+    {
+      "acc_mean": 73.29,
+      "acc_std": 0.0,
+      "bwt_mean": -2.0444444444444434,
+      "bwt_std": 0.0,
+      "command": "/home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 30 60 80 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --seed 0 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 10 --use_pls_cflat --cflat_rho 0.02 --cflat_lambda 0.02 --pls_cflat_debug --pls_cflat_mode layer_selective --cflat_target_scope classifier --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/classifier_only_seed0",
+      "metrics_path": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/classifier_only_seed0/final_metrics.json",
+      "name": "classifier_only_seed0",
+      "repeat_count": 1,
+      "repeat_seeds": [
+        0
+      ],
+      "run_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/classifier_only_seed0",
+      "status": "completed",
+      "time_mean": 9502.658864736557,
+      "time_std": 0.0
+    },
+    {
+      "name": "deep_last_block_seed0",
+      "run_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/deep_last_block_seed0",
+      "status": "missing"
+    },
+    {
+      "acc_mean": 72.73999999999998,
+      "acc_std": 0.0,
+      "bwt_mean": -2.233333333333331,
+      "bwt_std": 0.0,
+      "command": "/home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 30 60 80 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --seed 0 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 10 --use_pls_cflat --cflat_rho 0.02 --cflat_lambda 0.02 --pls_cflat_debug --pls_cflat_mode layer_selective --cflat_target_scope deep --deep_layer_rule last_stage --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/deep_last_stage_seed0",
+      "metrics_path": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/deep_last_stage_seed0/final_metrics.json",
+      "name": "deep_last_stage_seed0",
+      "repeat_count": 1,
+      "repeat_seeds": [
+        0
+      ],
+      "run_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/deep_last_stage_seed0",
+      "status": "completed",
+      "time_mean": 13600.422612190247,
+      "time_std": 0.0
+    },
+    {
+      "acc_mean": 73.36999999999999,
+      "acc_std": 0.0,
+      "bwt_mean": -1.688888888888889,
+      "bwt_std": 0.0,
+      "command": "/home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 30 60 80 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --seed 0 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 10 --use_pls_cflat --cflat_rho 0.02 --cflat_lambda 0.02 --pls_cflat_debug --pls_cflat_mode layer_selective --cflat_target_scope deep_plus_classifier --deep_layer_rule last_block --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/last_block_plus_classifier_seed0",
+      "metrics_path": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/last_block_plus_classifier_seed0/final_metrics.json",
+      "name": "last_block_plus_classifier_seed0",
+      "repeat_count": 1,
+      "repeat_seeds": [
+        0
+      ],
+      "run_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/last_block_plus_classifier_seed0",
+      "status": "completed",
+      "time_mean": 9547.575693130493,
+      "time_std": 0.0
+    },
+    {
+      "acc_mean": 74.20000000000002,
+      "acc_std": 0.0,
+      "bwt_mean": -2.800000000000002,
+      "bwt_std": 0.0,
+      "command": "/home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 30 60 80 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --seed 0 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 10 --use_pls_cflat --cflat_rho 0.02 --cflat_lambda 0.02 --pls_cflat_debug --pls_cflat_mode projected_all --cflat_target_scope all --deep_layer_rule last_stage --project_before_perturb --project_after_aggregate --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/v2_projected_all_seed0",
+      "metrics_path": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/v2_projected_all_seed0/final_metrics.json",
+      "name": "v2_projected_all_seed0",
+      "repeat_count": 1,
+      "repeat_seeds": [
+        0
+      ],
+      "run_dir": "/home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/v2_projected_all_seed0",
+      "status": "completed",
+      "time_mean": 19560.382190465927,
+      "time_std": 0.0
+    }
+  ]
+}

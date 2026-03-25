@@ -1,0 +1,815 @@
+Files already downloaded and verified
+Files already downloaded and verified
+split_boundaries: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+{'1': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], '2': [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], '3': [20, 21, 22, 23, 24, 25, 26, 27, 28, 29], '4': [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], '5': [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], '6': [50, 51, 52, 53, 54, 55, 56, 57, 58, 59], '7': [60, 61, 62, 63, 64, 65, 66, 67, 68, 69], '8': [70, 71, 72, 73, 74, 75, 76, 77, 78, 79], '9': [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], '10': [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]}
+{'model_lr': 0.0001, 'momentum': 0, 'model_weight_decay': 5e-05, 'schedule': [5, 10, 15], 'model_type': 'resnet', 'model_name': 'resnet18', 'model_weights': None, 'out_dim': {'1': 10, '2': 10, '3': 10, '4': 10, '5': 10, '6': 10, '7': 10, '8': 10, '9': 10, '10': 10}, 'model_optimizer': 'Adam', 'print_freq': 100.0, 'gpu': True, 'with_head': False, 'reset_model_opt': True, 'reg_coef': 100.0, 'head_lr': 0.001, 'svd_lr': 5e-05, 'bn_lr': 0.0005, 'svd_thres': 10.0, 'gamma': 0.5, 'dataset_name': 'CIFAR100_10_10', 'use_cflat': False, 'cflat_rho': 0.02, 'cflat_lambda': 0.02, 'cflat_eps': 1e-12, 'cflat_adaptive': False, 'cflat_bn_mode': 'disable_running_stats', 'cflat_on_total_loss': False, 'cflat_debug': False, 'use_pls_cflat': True, 'pls_cflat_mode': 'projected_layer_selective', 'cflat_target_scope': 'deep_plus_classifier', 'project_before_perturb': True, 'project_after_aggregate': True, 'deep_layer_rule': 'last_stage', 'pls_cflat_debug': True, 'max_train_batches': 0, 'max_eval_batches': 0}
+#param of model:11218340
+Task order: ['1', '2', '3']
+====================== 1 =======================
+Epoch:0
+LR: 0.0001
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+/home/moshiling/miniconda3/envs/torch118/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:143: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+/home/moshiling/miniconda3/envs/torch118/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	14.1359 (14.1359)	0.0141 (0.0141)	2.446 (2.446)	3.12 (3.12)
+C-Flat stats | raw_grad: 5.392705 | projected_target: 3.886275 | g_0: 3.886275 | g_1: 3.973429 | g_2: 3.983136 | final: 5.457116 | e_w_0: 0.020000 | e_w_1_2: 0.032527 | target_ratio: 0.7517
+[100/157]	0.0598 (0.2201)	0.0097 (0.0127)	1.891 (1.861)	40.62 (35.15)
+C-Flat stats | raw_grad: 6.925202 | projected_target: 2.849948 | g_0: 2.849948 | g_1: 2.913551 | g_2: 2.934762 | final: 6.952186 | e_w_0: 0.020000 | e_w_1_2: 0.032740 | target_ratio: 0.7517
+[156/157]	0.2597 (0.1676)	0.0045 (0.0121)	1.887 (1.753)	25.00 (38.88)
+C-Flat stats | raw_grad: 10.560986 | projected_target: 5.412429 | g_0: 5.412429 | g_1: 5.571076 | g_2: 5.558715 | final: 10.644894 | e_w_0: 0.020000 | e_w_1_2: 0.033946 | target_ratio: 0.7517
+ * Train Acc 38.880
+ * Val Acc 45.500, Total time 0.36
+ * Val loss 1.822, Total time 0.00
+Epoch:1
+LR: 0.0001
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0800 (0.0800)	0.0125 (0.0125)	1.620 (1.620)	50.00 (50.00)
+C-Flat stats | raw_grad: 7.475415 | projected_target: 2.726994 | g_0: 2.726994 | g_1: 2.827947 | g_2: 2.848300 | final: 7.513577 | e_w_0: 0.020000 | e_w_1_2: 0.034952 | target_ratio: 0.7517
+[100/157]	0.0881 (0.0791)	0.0133 (0.0122)	1.257 (1.416)	56.25 (52.01)
+C-Flat stats | raw_grad: 6.690394 | projected_target: 2.307556 | g_0: 2.307556 | g_1: 2.372623 | g_2: 2.380518 | final: 6.713611 | e_w_0: 0.020000 | e_w_1_2: 0.034281 | target_ratio: 0.7517
+[156/157]	0.0710 (0.0791)	0.0034 (0.0122)	1.186 (1.358)	50.00 (53.94)
+C-Flat stats | raw_grad: 13.314973 | projected_target: 4.807246 | g_0: 4.807246 | g_1: 4.964694 | g_2: 4.953745 | final: 13.373643 | e_w_0: 0.020000 | e_w_1_2: 0.034256 | target_ratio: 0.7517
+ * Train Acc 53.940
+ * Val Acc 58.800, Total time 0.36
+ * Val loss 1.286, Total time 0.00
+Epoch:2
+LR: 0.0001
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0712 (0.0712)	0.0128 (0.0128)	1.113 (1.113)	62.50 (62.50)
+C-Flat stats | raw_grad: 7.019372 | projected_target: 2.816208 | g_0: 2.816208 | g_1: 2.949044 | g_2: 2.964284 | final: 7.074850 | e_w_0: 0.020000 | e_w_1_2: 0.037048 | target_ratio: 0.7517
+[100/157]	0.0749 (0.0758)	0.0126 (0.0116)	1.007 (1.149)	71.88 (62.35)
+C-Flat stats | raw_grad: 7.385371 | projected_target: 2.341125 | g_0: 2.341125 | g_1: 2.461110 | g_2: 2.482699 | final: 7.425089 | e_w_0: 0.020000 | e_w_1_2: 0.037059 | target_ratio: 0.7517
+[156/157]	0.0645 (0.0761)	0.0038 (0.0117)	1.172 (1.155)	62.50 (61.62)
+C-Flat stats | raw_grad: 8.578333 | projected_target: 3.384573 | g_0: 3.384573 | g_1: 3.492468 | g_2: 3.494616 | final: 8.622416 | e_w_0: 0.020000 | e_w_1_2: 0.034164 | target_ratio: 0.7517
+ * Train Acc 61.620
+ * Val Acc 65.400, Total time 0.40
+ * Val loss 1.017, Total time 0.00
+Epoch:3
+LR: 0.0001
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0877 (0.0877)	0.0122 (0.0122)	1.415 (1.415)	43.75 (43.75)
+C-Flat stats | raw_grad: 7.518119 | projected_target: 2.634287 | g_0: 2.634287 | g_1: 2.713887 | g_2: 2.717345 | final: 7.546946 | e_w_0: 0.020000 | e_w_1_2: 0.035299 | target_ratio: 0.7517
+[100/157]	0.1049 (0.0790)	0.0106 (0.0117)	0.982 (1.006)	62.50 (65.87)
+C-Flat stats | raw_grad: 8.135189 | projected_target: 2.169363 | g_0: 2.169363 | g_1: 2.249244 | g_2: 2.259519 | final: 8.157307 | e_w_0: 0.020000 | e_w_1_2: 0.034864 | target_ratio: 0.7517
+[156/157]	0.1011 (0.0781)	0.0035 (0.0116)	0.835 (0.992)	75.00 (66.68)
+C-Flat stats | raw_grad: 17.345037 | projected_target: 3.706354 | g_0: 3.706354 | g_1: 3.892510 | g_2: 3.904061 | final: 17.386641 | e_w_0: 0.020000 | e_w_1_2: 0.033877 | target_ratio: 0.7517
+ * Train Acc 66.680
+ * Val Acc 62.600, Total time 0.35
+ * Val loss 1.082, Total time 0.00
+Epoch:4
+LR: 0.0001
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0726 (0.0726)	0.0098 (0.0098)	0.824 (0.824)	68.75 (68.75)
+C-Flat stats | raw_grad: 6.070214 | projected_target: 1.867528 | g_0: 1.867528 | g_1: 1.941114 | g_2: 1.952406 | final: 6.093737 | e_w_0: 0.020000 | e_w_1_2: 0.035099 | target_ratio: 0.7517
+[100/157]	0.0717 (0.0827)	0.0115 (0.0128)	1.006 (0.901)	65.62 (69.71)
+C-Flat stats | raw_grad: 9.223782 | projected_target: 2.381686 | g_0: 2.381686 | g_1: 2.488346 | g_2: 2.510556 | final: 9.252502 | e_w_0: 0.020000 | e_w_1_2: 0.036470 | target_ratio: 0.7517
+[156/157]	0.0791 (0.0793)	0.0037 (0.0125)	1.080 (0.887)	62.50 (70.08)
+C-Flat stats | raw_grad: 16.794821 | projected_target: 4.099677 | g_0: 4.099677 | g_1: 4.215968 | g_2: 4.247438 | final: 16.824223 | e_w_0: 0.020000 | e_w_1_2: 0.032500 | target_ratio: 0.7517
+ * Train Acc 70.080
+ * Val Acc 72.900, Total time 0.37
+ * Val loss 0.838, Total time 0.00
+Epoch:5
+LR: 0.0001
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0729 (0.0729)	0.0114 (0.0114)	0.602 (0.602)	78.12 (78.12)
+C-Flat stats | raw_grad: 8.058011 | projected_target: 1.571265 | g_0: 1.571265 | g_1: 1.646066 | g_2: 1.650135 | final: 8.073236 | e_w_0: 0.020000 | e_w_1_2: 0.035761 | target_ratio: 0.7517
+[100/157]	0.0675 (0.0773)	0.0113 (0.0122)	0.753 (0.721)	68.75 (76.27)
+C-Flat stats | raw_grad: 7.807311 | projected_target: 2.110819 | g_0: 2.110819 | g_1: 2.216233 | g_2: 2.229589 | final: 7.837030 | e_w_0: 0.020000 | e_w_1_2: 0.036226 | target_ratio: 0.7517
+[156/157]	0.0812 (0.0769)	0.0047 (0.0121)	0.890 (0.710)	75.00 (76.58)
+C-Flat stats | raw_grad: 21.213072 | projected_target: 5.078942 | g_0: 5.078942 | g_1: 5.301992 | g_2: 5.298274 | final: 21.268778 | e_w_0: 0.020000 | e_w_1_2: 0.034950 | target_ratio: 0.7517
+ * Train Acc 76.580
+ * Val Acc 77.500, Total time 0.43
+ * Val loss 0.692, Total time 0.00
+Epoch:6
+LR: 5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0770 (0.0770)	0.0115 (0.0115)	0.523 (0.523)	84.38 (84.38)
+C-Flat stats | raw_grad: 6.393431 | projected_target: 1.783801 | g_0: 1.783801 | g_1: 1.885006 | g_2: 1.897939 | final: 6.423030 | e_w_0: 0.020000 | e_w_1_2: 0.036693 | target_ratio: 0.7517
+[100/157]	0.0654 (0.0722)	0.0118 (0.0114)	0.588 (0.625)	81.25 (79.21)
+C-Flat stats | raw_grad: 11.602773 | projected_target: 2.143888 | g_0: 2.143888 | g_1: 2.265705 | g_2: 2.285899 | final: 11.626369 | e_w_0: 0.020000 | e_w_1_2: 0.036632 | target_ratio: 0.7517
+[156/157]	0.1130 (0.0726)	0.0047 (0.0112)	0.575 (0.639)	75.00 (78.20)
+C-Flat stats | raw_grad: 14.613163 | projected_target: 3.819464 | g_0: 3.819464 | g_1: 4.094899 | g_2: 4.085471 | final: 14.688899 | e_w_0: 0.020000 | e_w_1_2: 0.037111 | target_ratio: 0.7517
+ * Train Acc 78.200
+ * Val Acc 77.700, Total time 0.34
+ * Val loss 0.657, Total time 0.00
+Epoch:7
+LR: 5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0671 (0.0671)	0.0118 (0.0118)	0.434 (0.434)	87.50 (87.50)
+C-Flat stats | raw_grad: 7.091422 | projected_target: 1.876891 | g_0: 1.876891 | g_1: 1.988232 | g_2: 1.999863 | final: 7.122264 | e_w_0: 0.020000 | e_w_1_2: 0.036820 | target_ratio: 0.7517
+[100/157]	0.0530 (0.0717)	0.0087 (0.0110)	0.482 (0.558)	84.38 (80.94)
+C-Flat stats | raw_grad: 8.446588 | projected_target: 2.094796 | g_0: 2.094796 | g_1: 2.233298 | g_2: 2.242949 | final: 8.482708 | e_w_0: 0.020000 | e_w_1_2: 0.037676 | target_ratio: 0.7517
+[156/157]	0.0577 (0.0684)	0.0031 (0.0105)	0.996 (0.581)	62.50 (80.20)
+C-Flat stats | raw_grad: 24.456423 | projected_target: 5.654781 | g_0: 5.654781 | g_1: 5.937550 | g_2: 5.932074 | final: 24.524721 | e_w_0: 0.020000 | e_w_1_2: 0.034360 | target_ratio: 0.7517
+ * Train Acc 80.200
+ * Val Acc 79.500, Total time 0.62
+ * Val loss 0.610, Total time 0.00
+Epoch:8
+LR: 5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.1091 (0.1091)	0.0130 (0.0130)	0.719 (0.719)	78.12 (78.12)
+C-Flat stats | raw_grad: 9.504232 | projected_target: 2.113481 | g_0: 2.113481 | g_1: 2.179694 | g_2: 2.198957 | final: 9.519525 | e_w_0: 0.020000 | e_w_1_2: 0.033984 | target_ratio: 0.7517
+[100/157]	0.0841 (0.0721)	0.0141 (0.0109)	0.286 (0.565)	93.75 (80.60)
+C-Flat stats | raw_grad: 7.906218 | projected_target: 1.477473 | g_0: 1.477473 | g_1: 1.665776 | g_2: 1.700286 | final: 7.944397 | e_w_0: 0.020000 | e_w_1_2: 0.038389 | target_ratio: 0.7517
+[156/157]	0.0739 (0.0733)	0.0058 (0.0112)	1.493 (0.568)	62.50 (80.60)
+C-Flat stats | raw_grad: 24.561203 | projected_target: 6.648750 | g_0: 6.648750 | g_1: 6.916694 | g_2: 6.958720 | final: 24.636564 | e_w_0: 0.020000 | e_w_1_2: 0.034859 | target_ratio: 0.7517
+ * Train Acc 80.600
+ * Val Acc 78.800, Total time 0.38
+ * Val loss 0.657, Total time 0.00
+Epoch:9
+LR: 5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0731 (0.0731)	0.0116 (0.0116)	0.513 (0.513)	81.25 (81.25)
+C-Flat stats | raw_grad: 10.802186 | projected_target: 1.977257 | g_0: 1.977257 | g_1: 2.080877 | g_2: 2.082721 | final: 10.822006 | e_w_0: 0.020000 | e_w_1_2: 0.035636 | target_ratio: 0.7517
+[100/157]	0.0806 (0.0733)	0.0101 (0.0112)	0.505 (0.534)	78.12 (82.09)
+C-Flat stats | raw_grad: 7.700196 | projected_target: 1.947123 | g_0: 1.947123 | g_1: 2.078013 | g_2: 2.087319 | final: 7.735031 | e_w_0: 0.020000 | e_w_1_2: 0.037471 | target_ratio: 0.7517
+[156/157]	0.0527 (0.0714)	0.0029 (0.0109)	0.851 (0.531)	75.00 (82.28)
+C-Flat stats | raw_grad: 23.801476 | projected_target: 5.194838 | g_0: 5.194838 | g_1: 5.438786 | g_2: 5.455960 | final: 23.856915 | e_w_0: 0.020000 | e_w_1_2: 0.035404 | target_ratio: 0.7517
+ * Train Acc 82.280
+ * Val Acc 81.700, Total time 0.39
+ * Val loss 0.588, Total time 0.00
+Epoch:10
+LR: 5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0562 (0.0562)	0.0102 (0.0102)	0.383 (0.383)	90.62 (90.62)
+C-Flat stats | raw_grad: 11.077786 | projected_target: 1.722444 | g_0: 1.722444 | g_1: 1.812090 | g_2: 1.821739 | final: 11.092362 | e_w_0: 0.020000 | e_w_1_2: 0.035860 | target_ratio: 0.7517
+[100/157]	0.0644 (0.0668)	0.0119 (0.0107)	0.644 (0.433)	75.00 (85.43)
+C-Flat stats | raw_grad: 13.549169 | projected_target: 2.610615 | g_0: 2.610615 | g_1: 2.716727 | g_2: 2.720312 | final: 13.570405 | e_w_0: 0.020000 | e_w_1_2: 0.035477 | target_ratio: 0.7517
+[156/157]	0.0561 (0.0658)	0.0029 (0.0104)	0.803 (0.443)	62.50 (85.28)
+C-Flat stats | raw_grad: 29.715378 | projected_target: 6.389011 | g_0: 6.389011 | g_1: 6.734352 | g_2: 6.786644 | final: 29.792755 | e_w_0: 0.020000 | e_w_1_2: 0.034406 | target_ratio: 0.7517
+ * Train Acc 85.280
+ * Val Acc 83.000, Total time 0.32
+ * Val loss 0.527, Total time 0.00
+Epoch:11
+LR: 2.5e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0536 (0.0536)	0.0089 (0.0089)	0.374 (0.374)	93.75 (93.75)
+C-Flat stats | raw_grad: 8.029364 | projected_target: 1.612785 | g_0: 1.612785 | g_1: 1.676460 | g_2: 1.687496 | final: 8.042687 | e_w_0: 0.020000 | e_w_1_2: 0.033960 | target_ratio: 0.7517
+[100/157]	0.0569 (0.0604)	0.0088 (0.0095)	0.442 (0.395)	84.38 (86.73)
+C-Flat stats | raw_grad: 6.722255 | projected_target: 1.744253 | g_0: 1.744253 | g_1: 1.825415 | g_2: 1.823176 | final: 6.744205 | e_w_0: 0.020000 | e_w_1_2: 0.035260 | target_ratio: 0.7517
+[156/157]	0.0576 (0.0608)	0.0033 (0.0095)	0.374 (0.394)	87.50 (86.78)
+C-Flat stats | raw_grad: 20.242397 | projected_target: 3.654857 | g_0: 3.654857 | g_1: 3.875457 | g_2: 3.915769 | final: 20.284250 | e_w_0: 0.020000 | e_w_1_2: 0.034667 | target_ratio: 0.7517
+ * Train Acc 86.780
+ * Val Acc 81.000, Total time 0.34
+ * Val loss 0.556, Total time 0.00
+Epoch:12
+LR: 2.5e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0632 (0.0632)	0.0093 (0.0093)	0.330 (0.330)	87.50 (87.50)
+C-Flat stats | raw_grad: 7.191671 | projected_target: 1.650741 | g_0: 1.650741 | g_1: 1.780620 | g_2: 1.808356 | final: 7.223145 | e_w_0: 0.020000 | e_w_1_2: 0.036883 | target_ratio: 0.7517
+[100/157]	0.0539 (0.0606)	0.0097 (0.0096)	0.254 (0.384)	96.88 (87.25)
+C-Flat stats | raw_grad: 8.973457 | projected_target: 1.431465 | g_0: 1.431465 | g_1: 1.514958 | g_2: 1.523688 | final: 8.987449 | e_w_0: 0.020000 | e_w_1_2: 0.035522 | target_ratio: 0.7517
+[156/157]	0.0626 (0.0612)	0.0030 (0.0096)	0.971 (0.378)	62.50 (87.38)
+C-Flat stats | raw_grad: 30.705662 | projected_target: 5.920640 | g_0: 5.920640 | g_1: 6.301873 | g_2: 6.395720 | final: 30.783047 | e_w_0: 0.020000 | e_w_1_2: 0.035375 | target_ratio: 0.7517
+ * Train Acc 87.380
+ * Val Acc 82.100, Total time 0.36
+ * Val loss 0.539, Total time 0.00
+Epoch:13
+LR: 2.5e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0683 (0.0683)	0.0113 (0.0113)	0.489 (0.489)	78.12 (78.12)
+C-Flat stats | raw_grad: 14.828894 | projected_target: 2.382752 | g_0: 2.382752 | g_1: 2.480899 | g_2: 2.491263 | final: 14.845304 | e_w_0: 0.020000 | e_w_1_2: 0.034572 | target_ratio: 0.7517
+[100/157]	0.0686 (0.0625)	0.0156 (0.0096)	0.444 (0.364)	84.38 (87.78)
+C-Flat stats | raw_grad: 10.246510 | projected_target: 2.170929 | g_0: 2.170929 | g_1: 2.311031 | g_2: 2.339809 | final: 10.277699 | e_w_0: 0.020000 | e_w_1_2: 0.036007 | target_ratio: 0.7517
+[156/157]	0.0484 (0.0632)	0.0026 (0.0098)	0.782 (0.366)	62.50 (87.56)
+C-Flat stats | raw_grad: 31.074533 | projected_target: 6.784215 | g_0: 6.784215 | g_1: 7.414310 | g_2: 7.452276 | final: 31.220654 | e_w_0: 0.020000 | e_w_1_2: 0.037552 | target_ratio: 0.7517
+ * Train Acc 87.560
+ * Val Acc 82.300, Total time 0.31
+ * Val loss 0.548, Total time 0.00
+Epoch:14
+LR: 2.5e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 0
+[0/157]	0.0679 (0.0679)	0.0113 (0.0113)	0.305 (0.305)	87.50 (87.50)
+C-Flat stats | raw_grad: 7.989127 | projected_target: 1.611349 | g_0: 1.611349 | g_1: 1.705440 | g_2: 1.718452 | final: 8.009059 | e_w_0: 0.020000 | e_w_1_2: 0.036167 | target_ratio: 0.7517
+[100/157]	0.0752 (0.0624)	0.0147 (0.0098)	0.119 (0.344)	100.00 (88.99)
+C-Flat stats | raw_grad: 4.921636 | projected_target: 1.012607 | g_0: 1.012607 | g_1: 1.225752 | g_2: 1.252746 | final: 4.970837 | e_w_0: 0.020000 | e_w_1_2: 0.039046 | target_ratio: 0.7517
+[156/157]	0.0890 (0.0650)	0.0029 (0.0098)	0.427 (0.345)	87.50 (88.76)
+C-Flat stats | raw_grad: 22.051460 | projected_target: 5.229103 | g_0: 5.229103 | g_1: 5.662640 | g_2: 5.774186 | final: 22.159565 | e_w_0: 0.020000 | e_w_1_2: 0.035397 | target_ratio: 0.7517
+ * Train Acc 88.760
+ * Val Acc 83.300, Total time 0.34
+ * Val loss 0.522, Total time 0.00
+Classifier Optimizer is reset!
+reserving basis 6/27; cond: 344754.5, radio:6.336693331832066e-05
+reserving basis 100/576; cond: 10697565.0, radio:4.325224654166959e-05
+reserving basis 245/576; cond: 779465.5625, radio:0.0012506517814472318
+reserving basis 243/576; cond: 1280216.0, radio:0.0007599197560921311
+reserving basis 318/576; cond: 297247.46875, radio:0.0038512537721544504
+reserving basis 311/576; cond: 586808.5, radio:0.001919086673296988
+reserving basis 835/1152; cond: 297703.90625, radio:0.008703500032424927
+reserving basis 45/64; cond: 9666.4638671875, radio:0.01362581830471754
+reserving basis 891/1152; cond: 229252.09375, radio:0.011324478313326836
+reserving basis 913/1152; cond: 183110.515625, radio:0.014655908569693565
+reserving basis 850/1152; cond: 301487.75, radio:0.008902769535779953
+reserving basis 1675/2304; cond: 520869.25, radio:0.009818953461945057
+reserving basis 104/128; cond: 11265.4609375, radio:0.021953657269477844
+reserving basis 1673/2304; cond: 499746.09375, radio:0.009906431660056114
+reserving basis 1667/2304; cond: 519823.9375, radio:0.009288194589316845
+reserving basis 126/2304; cond: 92755048.0, radio:4.922343123325845e-06
+reserving basis 9/4608; cond: 835784278016.0, radio:2.7505114505443906e-11
+reserving basis 201/256; cond: 41703.08984375, radio:0.014461287297308445
+reserving basis 3/4608; cond: 1598647959552.0, radio:4.553372869725569e-12
+reserving basis 17/4608; cond: 577156874240.0, radio:5.49762839419099e-11
+computing EWC
+validation split name: 1
+ * Val Acc 83.300, Total time 0.33
+ * Val loss 0.522, Total time 0.00
+**************************************************
+training split name: 1
+ * Val Acc 91.580, Total time 2.13
+ * Val loss 0.248, Total time 0.00
+**************************************************
+====================== 2 =======================
+Epoch:0
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	1.8167 (1.8167)	0.0102 (0.0102)	2.432 (2.432)	0.00 (0.00)
+C-Flat stats | raw_grad: 3.364575 | projected_target: 2.643166 | g_0: 2.643166 | g_1: 2.711406 | g_2: 2.741163 | final: 3.229894 | e_w_0: 0.018408 | e_w_1_2: 0.036446 | target_ratio: 0.7517
+[100/157]	0.0803 (0.0951)	0.0088 (0.0097)	1.432 (1.785)	56.25 (37.04)
+C-Flat stats | raw_grad: 8.822034 | projected_target: 1.549452 | g_0: 1.549452 | g_1: 1.600530 | g_2: 1.648017 | final: 8.664198 | e_w_0: 0.013429 | e_w_1_2: 0.032389 | target_ratio: 0.7517
+[156/157]	0.0723 (0.0892)	0.0040 (0.0096)	1.847 (1.711)	62.50 (39.12)
+C-Flat stats | raw_grad: 12.474738 | projected_target: 3.893478 | g_0: 3.893478 | g_1: 3.947254 | g_2: 3.985640 | final: 12.063573 | e_w_0: 0.015367 | e_w_1_2: 0.033572 | target_ratio: 0.7517
+ * Train Acc 39.120
+ * Val Acc 49.700, Total time 0.33
+ * Val loss 1.443, Total time 0.00
+Epoch:1
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0886 (0.0886)	0.0115 (0.0115)	1.619 (1.619)	40.62 (40.62)
+C-Flat stats | raw_grad: 10.706949 | projected_target: 1.991102 | g_0: 1.991102 | g_1: 2.063238 | g_2: 2.121799 | final: 10.533612 | e_w_0: 0.014128 | e_w_1_2: 0.033111 | target_ratio: 0.7517
+[100/157]	0.0836 (0.0811)	0.0111 (0.0096)	1.458 (1.537)	46.88 (45.45)
+C-Flat stats | raw_grad: 9.723452 | projected_target: 1.676289 | g_0: 1.676289 | g_1: 1.745276 | g_2: 1.811280 | final: 9.525930 | e_w_0: 0.012807 | e_w_1_2: 0.032123 | target_ratio: 0.7517
+[156/157]	0.0642 (0.0801)	0.0026 (0.0095)	1.395 (1.521)	37.50 (46.06)
+C-Flat stats | raw_grad: 16.739326 | projected_target: 3.322773 | g_0: 3.322773 | g_1: 3.394667 | g_2: 3.447913 | final: 16.273365 | e_w_0: 0.012810 | e_w_1_2: 0.032254 | target_ratio: 0.7517
+ * Train Acc 46.060
+ * Val Acc 49.300, Total time 0.34
+ * Val loss 1.402, Total time 0.00
+Epoch:2
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0700 (0.0700)	0.0084 (0.0084)	1.270 (1.270)	50.00 (50.00)
+C-Flat stats | raw_grad: 8.942397 | projected_target: 1.372827 | g_0: 1.372827 | g_1: 1.419898 | g_2: 1.483227 | final: 8.754251 | e_w_0: 0.011872 | e_w_1_2: 0.030820 | target_ratio: 0.7517
+[100/157]	0.0657 (0.0760)	0.0084 (0.0094)	1.329 (1.476)	50.00 (47.37)
+C-Flat stats | raw_grad: 9.071936 | projected_target: 2.014984 | g_0: 2.014984 | g_1: 2.091272 | g_2: 2.137618 | final: 8.874863 | e_w_0: 0.014323 | e_w_1_2: 0.033727 | target_ratio: 0.7517
+[156/157]	0.0609 (0.0796)	0.0027 (0.0095)	1.569 (1.468)	50.00 (48.16)
+C-Flat stats | raw_grad: 25.458265 | projected_target: 3.628262 | g_0: 3.628262 | g_1: 3.708568 | g_2: 3.780034 | final: 25.010254 | e_w_0: 0.012032 | e_w_1_2: 0.031440 | target_ratio: 0.7517
+ * Train Acc 48.160
+ * Val Acc 51.700, Total time 0.32
+ * Val loss 1.341, Total time 0.00
+Epoch:3
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0782 (0.0782)	0.0092 (0.0092)	1.587 (1.587)	50.00 (50.00)
+C-Flat stats | raw_grad: 10.958038 | projected_target: 1.502240 | g_0: 1.502240 | g_1: 1.552161 | g_2: 1.619250 | final: 10.713408 | e_w_0: 0.010818 | e_w_1_2: 0.030237 | target_ratio: 0.7517
+[100/157]	0.0835 (0.0764)	0.0145 (0.0094)	1.572 (1.454)	40.62 (48.70)
+C-Flat stats | raw_grad: 11.631415 | projected_target: 2.075334 | g_0: 2.075334 | g_1: 2.134346 | g_2: 2.190109 | final: 11.369416 | e_w_0: 0.012757 | e_w_1_2: 0.031883 | target_ratio: 0.7517
+[156/157]	0.0658 (0.0759)	0.0025 (0.0093)	1.340 (1.444)	37.50 (49.28)
+C-Flat stats | raw_grad: 17.791891 | projected_target: 3.888200 | g_0: 3.888200 | g_1: 4.033973 | g_2: 4.113160 | final: 17.338032 | e_w_0: 0.013696 | e_w_1_2: 0.033483 | target_ratio: 0.7517
+ * Train Acc 49.280
+ * Val Acc 53.600, Total time 0.33
+ * Val loss 1.306, Total time 0.00
+Epoch:4
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0725 (0.0725)	0.0086 (0.0086)	1.056 (1.056)	59.38 (59.38)
+C-Flat stats | raw_grad: 8.683660 | projected_target: 1.222355 | g_0: 1.222355 | g_1: 1.260683 | g_2: 1.317253 | final: 8.476842 | e_w_0: 0.010783 | e_w_1_2: 0.029894 | target_ratio: 0.7517
+[100/157]	0.0813 (0.0785)	0.0099 (0.0099)	1.694 (1.402)	50.00 (50.40)
+C-Flat stats | raw_grad: 11.242267 | projected_target: 2.299643 | g_0: 2.299643 | g_1: 2.395197 | g_2: 2.455344 | final: 11.007927 | e_w_0: 0.013893 | e_w_1_2: 0.033447 | target_ratio: 0.7517
+[156/157]	0.0843 (0.0774)	0.0044 (0.0098)	1.258 (1.412)	62.50 (50.56)
+C-Flat stats | raw_grad: 18.551886 | projected_target: 2.902493 | g_0: 2.902493 | g_1: 2.980686 | g_2: 3.062849 | final: 18.074791 | e_w_0: 0.011305 | e_w_1_2: 0.030808 | target_ratio: 0.7517
+ * Train Acc 50.560
+ * Val Acc 54.700, Total time 0.31
+ * Val loss 1.282, Total time 0.00
+Epoch:5
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0847 (0.0847)	0.0089 (0.0089)	1.274 (1.274)	50.00 (50.00)
+C-Flat stats | raw_grad: 11.915207 | projected_target: 2.502262 | g_0: 2.502262 | g_1: 2.595117 | g_2: 2.639030 | final: 11.686148 | e_w_0: 0.014358 | e_w_1_2: 0.034195 | target_ratio: 0.7517
+[100/157]	0.0930 (0.0761)	0.0139 (0.0094)	1.491 (1.349)	40.62 (53.16)
+C-Flat stats | raw_grad: 9.768619 | projected_target: 1.753672 | g_0: 1.753672 | g_1: 1.816834 | g_2: 1.882439 | final: 9.475890 | e_w_0: 0.011731 | e_w_1_2: 0.031275 | target_ratio: 0.7517
+[156/157]	0.0575 (0.0762)	0.0026 (0.0094)	1.240 (1.370)	50.00 (52.44)
+C-Flat stats | raw_grad: 16.600533 | projected_target: 2.833140 | g_0: 2.833140 | g_1: 2.891941 | g_2: 2.957148 | final: 16.062223 | e_w_0: 0.011123 | e_w_1_2: 0.030439 | target_ratio: 0.7517
+ * Train Acc 52.440
+ * Val Acc 54.500, Total time 0.31
+ * Val loss 1.256, Total time 0.00
+Epoch:6
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0740 (0.0740)	0.0088 (0.0088)	1.282 (1.282)	56.25 (56.25)
+C-Flat stats | raw_grad: 9.949214 | projected_target: 1.498945 | g_0: 1.498945 | g_1: 1.540077 | g_2: 1.602596 | final: 9.673354 | e_w_0: 0.010743 | e_w_1_2: 0.029783 | target_ratio: 0.7517
+[100/157]	0.0791 (0.0761)	0.0093 (0.0090)	1.523 (1.349)	46.88 (54.12)
+C-Flat stats | raw_grad: 10.124449 | projected_target: 1.726232 | g_0: 1.726232 | g_1: 1.770562 | g_2: 1.822141 | final: 9.812670 | e_w_0: 0.011289 | e_w_1_2: 0.030475 | target_ratio: 0.7517
+[156/157]	0.0617 (0.0760)	0.0025 (0.0091)	1.698 (1.355)	37.50 (53.38)
+C-Flat stats | raw_grad: 22.553654 | projected_target: 3.041131 | g_0: 3.041131 | g_1: 3.092062 | g_2: 3.172854 | final: 21.855831 | e_w_0: 0.009551 | e_w_1_2: 0.028663 | target_ratio: 0.7517
+ * Train Acc 53.380
+ * Val Acc 55.500, Total time 0.35
+ * Val loss 1.241, Total time 0.00
+Epoch:7
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0748 (0.0748)	0.0102 (0.0102)	1.096 (1.096)	68.75 (68.75)
+C-Flat stats | raw_grad: 10.519312 | projected_target: 1.560470 | g_0: 1.560470 | g_1: 1.619209 | g_2: 1.685540 | final: 10.255493 | e_w_0: 0.010962 | e_w_1_2: 0.030619 | target_ratio: 0.7517
+[100/157]	0.0690 (0.0788)	0.0082 (0.0087)	1.373 (1.353)	43.75 (54.08)
+C-Flat stats | raw_grad: 10.326465 | projected_target: 1.805714 | g_0: 1.805714 | g_1: 1.858506 | g_2: 1.920923 | final: 10.042994 | e_w_0: 0.011886 | e_w_1_2: 0.030894 | target_ratio: 0.7517
+[156/157]	0.0759 (0.0772)	0.0027 (0.0087)	1.432 (1.358)	50.00 (52.88)
+C-Flat stats | raw_grad: 18.756395 | projected_target: 3.025134 | g_0: 3.025134 | g_1: 3.092843 | g_2: 3.176690 | final: 18.121532 | e_w_0: 0.010535 | e_w_1_2: 0.029931 | target_ratio: 0.7517
+ * Train Acc 52.880
+ * Val Acc 55.900, Total time 0.35
+ * Val loss 1.244, Total time 0.00
+Epoch:8
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0779 (0.0779)	0.0099 (0.0099)	1.325 (1.325)	53.12 (53.12)
+C-Flat stats | raw_grad: 8.588670 | projected_target: 1.647937 | g_0: 1.647937 | g_1: 1.708474 | g_2: 1.776853 | final: 8.295481 | e_w_0: 0.011746 | e_w_1_2: 0.031060 | target_ratio: 0.7517
+[100/157]	0.0731 (0.0734)	0.0083 (0.0091)	1.224 (1.349)	56.25 (52.94)
+C-Flat stats | raw_grad: 10.398993 | projected_target: 1.372004 | g_0: 1.372004 | g_1: 1.419331 | g_2: 1.485790 | final: 10.136759 | e_w_0: 0.010086 | e_w_1_2: 0.029718 | target_ratio: 0.7517
+[156/157]	0.0654 (0.0739)	0.0026 (0.0092)	1.427 (1.340)	75.00 (53.22)
+C-Flat stats | raw_grad: 18.325470 | projected_target: 3.192489 | g_0: 3.192489 | g_1: 3.250060 | g_2: 3.310336 | final: 17.814779 | e_w_0: 0.011851 | e_w_1_2: 0.030839 | target_ratio: 0.7517
+ * Train Acc 53.220
+ * Val Acc 55.300, Total time 0.33
+ * Val loss 1.220, Total time 0.00
+Epoch:9
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0712 (0.0712)	0.0086 (0.0086)	1.112 (1.112)	68.75 (68.75)
+C-Flat stats | raw_grad: 9.239620 | projected_target: 1.345984 | g_0: 1.345984 | g_1: 1.382077 | g_2: 1.445877 | final: 8.953709 | e_w_0: 0.010093 | e_w_1_2: 0.029056 | target_ratio: 0.7517
+[100/157]	0.0802 (0.0746)	0.0083 (0.0090)	1.093 (1.349)	65.62 (54.24)
+C-Flat stats | raw_grad: 8.684835 | projected_target: 1.455516 | g_0: 1.455516 | g_1: 1.501472 | g_2: 1.560834 | final: 8.387573 | e_w_0: 0.010751 | e_w_1_2: 0.030110 | target_ratio: 0.7517
+[156/157]	0.0718 (0.0782)	0.0032 (0.0094)	1.279 (1.345)	62.50 (54.10)
+C-Flat stats | raw_grad: 19.316965 | projected_target: 3.184769 | g_0: 3.184769 | g_1: 3.251727 | g_2: 3.327282 | final: 18.680859 | e_w_0: 0.010805 | e_w_1_2: 0.030176 | target_ratio: 0.7517
+ * Train Acc 54.100
+ * Val Acc 56.800, Total time 0.34
+ * Val loss 1.205, Total time 0.00
+Epoch:10
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0732 (0.0732)	0.0086 (0.0086)	1.197 (1.197)	46.88 (46.88)
+C-Flat stats | raw_grad: 9.970016 | projected_target: 1.958185 | g_0: 1.958185 | g_1: 2.023453 | g_2: 2.073081 | final: 9.692382 | e_w_0: 0.012668 | e_w_1_2: 0.032326 | target_ratio: 0.7517
+[100/157]	0.0811 (0.0852)	0.0083 (0.0098)	1.426 (1.309)	50.00 (54.58)
+C-Flat stats | raw_grad: 10.031976 | projected_target: 2.073226 | g_0: 2.073226 | g_1: 2.138062 | g_2: 2.198128 | final: 9.678003 | e_w_0: 0.012199 | e_w_1_2: 0.031630 | target_ratio: 0.7517
+[156/157]	0.0761 (0.0855)	0.0045 (0.0097)	1.185 (1.316)	50.00 (54.30)
+C-Flat stats | raw_grad: 24.840191 | projected_target: 2.739333 | g_0: 2.739333 | g_1: 2.796868 | g_2: 2.890147 | final: 24.284788 | e_w_0: 0.009246 | e_w_1_2: 0.028618 | target_ratio: 0.7517
+ * Train Acc 54.300
+ * Val Acc 57.300, Total time 0.33
+ * Val loss 1.204, Total time 0.00
+Epoch:11
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0772 (0.0772)	0.0108 (0.0108)	1.303 (1.303)	59.38 (59.38)
+C-Flat stats | raw_grad: 10.291419 | projected_target: 2.224217 | g_0: 2.224217 | g_1: 2.308206 | g_2: 2.383673 | final: 9.916759 | e_w_0: 0.012382 | e_w_1_2: 0.031895 | target_ratio: 0.7517
+[100/157]	0.0735 (0.0740)	0.0084 (0.0093)	1.281 (1.313)	59.38 (54.86)
+C-Flat stats | raw_grad: 10.518446 | projected_target: 1.958020 | g_0: 1.958020 | g_1: 2.042070 | g_2: 2.107082 | final: 10.267062 | e_w_0: 0.012771 | e_w_1_2: 0.032444 | target_ratio: 0.7517
+[156/157]	0.0645 (0.0761)	0.0029 (0.0095)	1.387 (1.311)	50.00 (55.44)
+C-Flat stats | raw_grad: 21.157343 | projected_target: 2.808493 | g_0: 2.808493 | g_1: 2.863825 | g_2: 2.934802 | final: 20.658953 | e_w_0: 0.010422 | e_w_1_2: 0.029686 | target_ratio: 0.7517
+ * Train Acc 55.440
+ * Val Acc 55.800, Total time 0.29
+ * Val loss 1.194, Total time 0.00
+Epoch:12
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0673 (0.0673)	0.0087 (0.0087)	1.286 (1.286)	56.25 (56.25)
+C-Flat stats | raw_grad: 9.792792 | projected_target: 1.976925 | g_0: 1.976925 | g_1: 2.048056 | g_2: 2.111240 | final: 9.428687 | e_w_0: 0.011815 | e_w_1_2: 0.031448 | target_ratio: 0.7517
+[100/157]	0.0734 (0.0797)	0.0108 (0.0090)	1.585 (1.326)	34.38 (54.61)
+C-Flat stats | raw_grad: 11.004667 | projected_target: 1.881908 | g_0: 1.881908 | g_1: 1.930000 | g_2: 1.990005 | final: 10.647614 | e_w_0: 0.011119 | e_w_1_2: 0.030337 | target_ratio: 0.7517
+[156/157]	0.0668 (0.0776)	0.0025 (0.0090)	2.269 (1.323)	12.50 (54.44)
+C-Flat stats | raw_grad: 18.645052 | projected_target: 4.366405 | g_0: 4.366405 | g_1: 4.439740 | g_2: 4.516107 | final: 17.826696 | e_w_0: 0.012404 | e_w_1_2: 0.030911 | target_ratio: 0.7517
+ * Train Acc 54.440
+ * Val Acc 57.900, Total time 0.34
+ * Val loss 1.193, Total time 0.00
+Epoch:13
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0705 (0.0705)	0.0108 (0.0108)	1.491 (1.491)	43.75 (43.75)
+C-Flat stats | raw_grad: 11.220016 | projected_target: 1.784516 | g_0: 1.784516 | g_1: 1.836634 | g_2: 1.895485 | final: 10.922658 | e_w_0: 0.011308 | e_w_1_2: 0.030727 | target_ratio: 0.7517
+[100/157]	0.0731 (0.0753)	0.0101 (0.0089)	1.368 (1.284)	50.00 (55.60)
+C-Flat stats | raw_grad: 8.952024 | projected_target: 2.137938 | g_0: 2.137938 | g_1: 2.217966 | g_2: 2.287114 | final: 8.592129 | e_w_0: 0.012754 | e_w_1_2: 0.032123 | target_ratio: 0.7517
+[156/157]	0.0653 (0.0761)	0.0025 (0.0090)	1.281 (1.291)	62.50 (55.46)
+C-Flat stats | raw_grad: 24.207216 | projected_target: 2.827939 | g_0: 2.827939 | g_1: 2.875343 | g_2: 2.949039 | final: 23.579441 | e_w_0: 0.009143 | e_w_1_2: 0.028559 | target_ratio: 0.7517
+ * Train Acc 55.460
+ * Val Acc 56.800, Total time 0.33
+ * Val loss 1.187, Total time 0.00
+Epoch:14
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0723 (0.0723)	0.0086 (0.0086)	1.224 (1.224)	62.50 (62.50)
+C-Flat stats | raw_grad: 10.922389 | projected_target: 1.553208 | g_0: 1.553208 | g_1: 1.594968 | g_2: 1.660351 | final: 10.575796 | e_w_0: 0.009825 | e_w_1_2: 0.029179 | target_ratio: 0.7517
+[100/157]	0.0779 (0.0745)	0.0092 (0.0091)	1.451 (1.294)	46.88 (55.07)
+C-Flat stats | raw_grad: 10.491704 | projected_target: 1.825828 | g_0: 1.825828 | g_1: 1.892237 | g_2: 1.975059 | final: 10.116727 | e_w_0: 0.010857 | e_w_1_2: 0.030329 | target_ratio: 0.7517
+[156/157]	0.0649 (0.0749)	0.0035 (0.0092)	0.905 (1.293)	87.50 (54.76)
+C-Flat stats | raw_grad: 17.019903 | projected_target: 3.086650 | g_0: 3.086650 | g_1: 3.170890 | g_2: 3.248290 | final: 16.380627 | e_w_0: 0.011014 | e_w_1_2: 0.030839 | target_ratio: 0.7517
+ * Train Acc 54.760
+ * Val Acc 57.800, Total time 0.34
+ * Val loss 1.196, Total time 0.00
+Classifier Optimizer is reset!
+reserving basis 6/27; cond: 363733.59375, radio:6.114322604844347e-05
+reserving basis 98/576; cond: 10356622.0, radio:4.373531919554807e-05
+reserving basis 237/576; cond: 784321.875, radio:0.0012250037398189306
+reserving basis 243/576; cond: 1231552.5, radio:0.0007882781210355461
+reserving basis 320/576; cond: 288537.84375, radio:0.004005439579486847
+reserving basis 310/576; cond: 568243.5625, radio:0.0019767452031373978
+reserving basis 840/1152; cond: 286122.28125, radio:0.009139743633568287
+reserving basis 45/64; cond: 9367.9765625, radio:0.013984578661620617
+reserving basis 895/1152; cond: 220288.921875, radio:0.011769519187510014
+reserving basis 918/1152; cond: 175796.09375, radio:0.015253426507115364
+reserving basis 885/1152; cond: 263154.40625, radio:0.010290480218827724
+reserving basis 1871/2304; cond: 367861.3125, radio:0.01388124655932188
+reserving basis 104/128; cond: 10996.2626953125, radio:0.02243008464574814
+reserving basis 1871/2304; cond: 353127.0, radio:0.014123565517365932
+reserving basis 1858/2304; cond: 375859.0625, radio:0.013148372061550617
+reserving basis 961/2304; cond: 1741004.0, radio:0.0019351744558662176
+reserving basis 4/4608; cond: 1885174272.0, radio:3.0220410618397864e-09
+reserving basis 209/256; cond: 34726.26171875, radio:0.01680823788046837
+reserving basis 9/4608; cond: 2059997952.0, radio:1.4489730304489967e-08
+reserving basis 4/4608; cond: 12875642880.0, radio:5.652437407022148e-10
+computing EWC
+validation split name: 1
+ * Val Acc 82.000, Total time 0.36
+ * Val loss 0.602, Total time 0.00
+**************************************************
+training split name: 1
+ * Val Acc 90.540, Total time 1.98
+ * Val loss 0.268, Total time 0.00
+**************************************************
+validation split name: 2
+ * Val Acc 57.800, Total time 0.31
+ * Val loss 1.196, Total time 0.00
+**************************************************
+training split name: 2
+ * Val Acc 56.380, Total time 1.89
+ * Val loss 1.254, Total time 0.00
+**************************************************
+====================== 3 =======================
+Epoch:0
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	1.4454 (1.4454)	0.0092 (0.0092)	2.363 (2.363)	3.12 (3.12)
+C-Flat stats | raw_grad: 3.812788 | projected_target: 2.647474 | g_0: 2.647474 | g_1: 2.726842 | g_2: 2.763249 | final: 3.693794 | e_w_0: 0.018337 | e_w_1_2: 0.036362 | target_ratio: 0.7517
+[100/157]	0.0666 (0.0891)	0.0084 (0.0091)	1.593 (1.677)	40.62 (43.04)
+C-Flat stats | raw_grad: 10.082734 | projected_target: 2.041644 | g_0: 2.041644 | g_1: 2.121928 | g_2: 2.169352 | final: 9.940894 | e_w_0: 0.015062 | e_w_1_2: 0.034313 | target_ratio: 0.7517
+[156/157]	0.0692 (0.0843)	0.0026 (0.0092)	1.823 (1.586)	25.00 (46.26)
+C-Flat stats | raw_grad: 19.349543 | projected_target: 4.142055 | g_0: 4.142055 | g_1: 4.230946 | g_2: 4.279583 | final: 19.002535 | e_w_0: 0.014825 | e_w_1_2: 0.033976 | target_ratio: 0.7517
+ * Train Acc 46.260
+ * Val Acc 54.800, Total time 0.33
+ * Val loss 1.340, Total time 0.00
+Epoch:1
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0744 (0.0744)	0.0084 (0.0084)	1.306 (1.306)	53.12 (53.12)
+C-Flat stats | raw_grad: 8.649247 | projected_target: 1.456498 | g_0: 1.456498 | g_1: 1.513331 | g_2: 1.579065 | final: 8.457332 | e_w_0: 0.012335 | e_w_1_2: 0.031439 | target_ratio: 0.7517
+[100/157]	0.0926 (0.0842)	0.0113 (0.0100)	1.257 (1.410)	59.38 (52.60)
+C-Flat stats | raw_grad: 10.704113 | projected_target: 1.696306 | g_0: 1.696306 | g_1: 1.769136 | g_2: 1.826586 | final: 10.527020 | e_w_0: 0.012920 | e_w_1_2: 0.032470 | target_ratio: 0.7517
+[156/157]	0.0679 (0.0833)	0.0027 (0.0100)	1.038 (1.383)	62.50 (53.00)
+C-Flat stats | raw_grad: 15.726304 | projected_target: 2.857953 | g_0: 2.857953 | g_1: 2.932647 | g_2: 2.988618 | final: 15.476255 | e_w_0: 0.014110 | e_w_1_2: 0.033027 | target_ratio: 0.7517
+ * Train Acc 53.000
+ * Val Acc 54.800, Total time 0.34
+ * Val loss 1.332, Total time 0.00
+Epoch:2
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0879 (0.0879)	0.0111 (0.0111)	0.987 (0.987)	68.75 (68.75)
+C-Flat stats | raw_grad: 9.009245 | projected_target: 1.394039 | g_0: 1.394039 | g_1: 1.449080 | g_2: 1.508277 | final: 8.845532 | e_w_0: 0.012436 | e_w_1_2: 0.031602 | target_ratio: 0.7517
+[100/157]	0.0899 (0.0826)	0.0129 (0.0102)	1.088 (1.339)	71.88 (54.58)
+C-Flat stats | raw_grad: 9.433346 | projected_target: 1.590762 | g_0: 1.590762 | g_1: 1.662078 | g_2: 1.713685 | final: 9.280638 | e_w_0: 0.013414 | e_w_1_2: 0.033050 | target_ratio: 0.7517
+[156/157]	0.0622 (0.0808)	0.0028 (0.0100)	1.069 (1.328)	62.50 (55.18)
+C-Flat stats | raw_grad: 22.562637 | projected_target: 2.813200 | g_0: 2.813200 | g_1: 2.883018 | g_2: 2.935163 | final: 22.291948 | e_w_0: 0.012439 | e_w_1_2: 0.032087 | target_ratio: 0.7517
+ * Train Acc 55.180
+ * Val Acc 57.100, Total time 0.32
+ * Val loss 1.255, Total time 0.00
+Epoch:3
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0799 (0.0799)	0.0096 (0.0096)	1.316 (1.316)	56.25 (56.25)
+C-Flat stats | raw_grad: 11.015246 | projected_target: 1.444960 | g_0: 1.444960 | g_1: 1.484811 | g_2: 1.534690 | final: 10.791555 | e_w_0: 0.010857 | e_w_1_2: 0.030173 | target_ratio: 0.7517
+[100/157]	0.0825 (0.0806)	0.0090 (0.0101)	1.648 (1.312)	53.12 (56.16)
+C-Flat stats | raw_grad: 15.732478 | projected_target: 1.635666 | g_0: 1.635666 | g_1: 1.662075 | g_2: 1.711783 | final: 15.485467 | e_w_0: 0.010108 | e_w_1_2: 0.028619 | target_ratio: 0.7517
+[156/157]	0.0652 (0.0800)	0.0029 (0.0099)	1.404 (1.308)	50.00 (55.58)
+C-Flat stats | raw_grad: 23.174318 | projected_target: 4.157186 | g_0: 4.157186 | g_1: 4.241553 | g_2: 4.293882 | final: 22.698471 | e_w_0: 0.013174 | e_w_1_2: 0.032794 | target_ratio: 0.7517
+ * Train Acc 55.580
+ * Val Acc 57.300, Total time 0.31
+ * Val loss 1.236, Total time 0.00
+Epoch:4
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0795 (0.0795)	0.0095 (0.0095)	0.990 (0.990)	71.88 (71.88)
+C-Flat stats | raw_grad: 8.071292 | projected_target: 1.356409 | g_0: 1.356409 | g_1: 1.422803 | g_2: 1.483855 | final: 7.890945 | e_w_0: 0.012247 | e_w_1_2: 0.031943 | target_ratio: 0.7517
+[100/157]	0.0688 (0.0802)	0.0087 (0.0097)	1.274 (1.283)	56.25 (55.72)
+C-Flat stats | raw_grad: 12.211855 | projected_target: 2.036388 | g_0: 2.036388 | g_1: 2.099758 | g_2: 2.147352 | final: 11.974470 | e_w_0: 0.012780 | e_w_1_2: 0.032307 | target_ratio: 0.7517
+[156/157]	0.0582 (0.0816)	0.0025 (0.0095)	1.170 (1.282)	62.50 (56.68)
+C-Flat stats | raw_grad: 17.222376 | projected_target: 4.167311 | g_0: 4.167311 | g_1: 4.327240 | g_2: 4.401395 | final: 16.782177 | e_w_0: 0.014353 | e_w_1_2: 0.034120 | target_ratio: 0.7517
+ * Train Acc 56.680
+ * Val Acc 58.400, Total time 0.31
+ * Val loss 1.212, Total time 0.00
+Epoch:5
+LR: 5e-05
+LR: 0.001
+LR: 0.0005
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0799 (0.0799)	0.0103 (0.0103)	1.414 (1.414)	46.88 (46.88)
+C-Flat stats | raw_grad: 14.726782 | projected_target: 1.915743 | g_0: 1.915743 | g_1: 1.963268 | g_2: 2.017138 | final: 14.486812 | e_w_0: 0.011622 | e_w_1_2: 0.030828 | target_ratio: 0.7517
+[100/157]	0.0743 (0.0738)	0.0084 (0.0089)	1.558 (1.264)	50.00 (58.42)
+C-Flat stats | raw_grad: 11.137908 | projected_target: 1.503498 | g_0: 1.503498 | g_1: 1.543086 | g_2: 1.620458 | final: 10.834215 | e_w_0: 0.009992 | e_w_1_2: 0.028861 | target_ratio: 0.7517
+[156/157]	0.0619 (0.0737)	0.0026 (0.0088)	1.914 (1.249)	0.00 (59.00)
+C-Flat stats | raw_grad: 28.017496 | projected_target: 4.792141 | g_0: 4.792141 | g_1: 4.895175 | g_2: 4.975152 | final: 27.409203 | e_w_0: 0.012618 | e_w_1_2: 0.031953 | target_ratio: 0.7517
+ * Train Acc 59.000
+ * Val Acc 58.300, Total time 0.34
+ * Val loss 1.198, Total time 0.00
+Epoch:6
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0968 (0.0968)	0.0099 (0.0099)	1.190 (1.190)	59.38 (59.38)
+C-Flat stats | raw_grad: 11.833631 | projected_target: 1.767810 | g_0: 1.767810 | g_1: 1.823695 | g_2: 1.887520 | final: 11.520746 | e_w_0: 0.010841 | e_w_1_2: 0.030383 | target_ratio: 0.7517
+[100/157]	0.0695 (0.0760)	0.0084 (0.0092)	1.374 (1.237)	50.00 (58.29)
+C-Flat stats | raw_grad: 14.033765 | projected_target: 2.110066 | g_0: 2.110066 | g_1: 2.168336 | g_2: 2.214129 | final: 13.793755 | e_w_0: 0.012507 | e_w_1_2: 0.032039 | target_ratio: 0.7517
+[156/157]	0.0675 (0.0766)	0.0027 (0.0092)	1.323 (1.234)	50.00 (58.16)
+C-Flat stats | raw_grad: 27.363644 | projected_target: 2.824340 | g_0: 2.824340 | g_1: 2.877520 | g_2: 2.956373 | final: 26.931349 | e_w_0: 0.010024 | e_w_1_2: 0.029085 | target_ratio: 0.7517
+ * Train Acc 58.160
+ * Val Acc 58.900, Total time 0.31
+ * Val loss 1.193, Total time 0.00
+Epoch:7
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0826 (0.0826)	0.0085 (0.0085)	0.928 (0.928)	65.62 (65.62)
+C-Flat stats | raw_grad: 11.277309 | projected_target: 1.454290 | g_0: 1.454290 | g_1: 1.493221 | g_2: 1.541865 | final: 11.030435 | e_w_0: 0.010455 | e_w_1_2: 0.029994 | target_ratio: 0.7517
+[100/157]	0.0848 (0.0733)	0.0082 (0.0093)	0.845 (1.242)	81.25 (58.35)
+C-Flat stats | raw_grad: 8.789480 | projected_target: 1.369426 | g_0: 1.369426 | g_1: 1.433179 | g_2: 1.508230 | final: 8.555924 | e_w_0: 0.011081 | e_w_1_2: 0.030767 | target_ratio: 0.7517
+[156/157]	0.0696 (0.0733)	0.0025 (0.0092)	0.690 (1.224)	87.50 (58.98)
+C-Flat stats | raw_grad: 13.442104 | projected_target: 1.879352 | g_0: 1.879352 | g_1: 1.938705 | g_2: 2.013671 | final: 13.112412 | e_w_0: 0.010624 | e_w_1_2: 0.030029 | target_ratio: 0.7517
+ * Train Acc 58.980
+ * Val Acc 59.400, Total time 0.32
+ * Val loss 1.167, Total time 0.00
+Epoch:8
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0729 (0.0729)	0.0084 (0.0084)	1.006 (1.006)	65.62 (65.62)
+C-Flat stats | raw_grad: 9.151271 | projected_target: 1.335591 | g_0: 1.335591 | g_1: 1.369913 | g_2: 1.423974 | final: 8.863867 | e_w_0: 0.010056 | e_w_1_2: 0.029271 | target_ratio: 0.7517
+[100/157]	0.0695 (0.0780)	0.0088 (0.0097)	1.208 (1.245)	62.50 (58.51)
+C-Flat stats | raw_grad: 12.416718 | projected_target: 2.278632 | g_0: 2.278632 | g_1: 2.347932 | g_2: 2.398093 | final: 12.125923 | e_w_0: 0.012810 | e_w_1_2: 0.032476 | target_ratio: 0.7517
+[156/157]	0.0600 (0.0789)	0.0027 (0.0097)	1.325 (1.226)	62.50 (59.16)
+C-Flat stats | raw_grad: 22.362589 | projected_target: 3.648936 | g_0: 3.648936 | g_1: 3.741756 | g_2: 3.839472 | final: 21.710680 | e_w_0: 0.011162 | e_w_1_2: 0.030571 | target_ratio: 0.7517
+ * Train Acc 59.160
+ * Val Acc 60.100, Total time 0.34
+ * Val loss 1.182, Total time 0.00
+Epoch:9
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.1017 (0.1017)	0.0121 (0.0121)	1.479 (1.479)	53.12 (53.12)
+C-Flat stats | raw_grad: 12.011176 | projected_target: 1.988866 | g_0: 1.988866 | g_1: 2.053291 | g_2: 2.114547 | final: 11.692513 | e_w_0: 0.011592 | e_w_1_2: 0.031166 | target_ratio: 0.7517
+[100/157]	0.0720 (0.0799)	0.0091 (0.0100)	1.360 (1.200)	43.75 (59.62)
+C-Flat stats | raw_grad: 13.469472 | projected_target: 2.054986 | g_0: 2.054986 | g_1: 2.113936 | g_2: 2.161899 | final: 13.241772 | e_w_0: 0.012650 | e_w_1_2: 0.032108 | target_ratio: 0.7517
+[156/157]	0.0623 (0.0780)	0.0027 (0.0097)	1.375 (1.203)	62.50 (59.74)
+C-Flat stats | raw_grad: 27.992941 | projected_target: 2.788585 | g_0: 2.788585 | g_1: 2.823043 | g_2: 2.895027 | final: 27.337126 | e_w_0: 0.008383 | e_w_1_2: 0.027451 | target_ratio: 0.7517
+ * Train Acc 59.740
+ * Val Acc 60.400, Total time 0.30
+ * Val loss 1.172, Total time 0.00
+Epoch:10
+LR: 2.5e-05
+LR: 0.0005
+LR: 0.00025
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0684 (0.0684)	0.0086 (0.0086)	1.148 (1.148)	75.00 (75.00)
+C-Flat stats | raw_grad: 10.354633 | projected_target: 1.479381 | g_0: 1.479381 | g_1: 1.508609 | g_2: 1.560948 | final: 10.020124 | e_w_0: 0.009812 | e_w_1_2: 0.028738 | target_ratio: 0.7517
+[100/157]	0.0774 (0.0753)	0.0084 (0.0093)	1.371 (1.192)	46.88 (59.90)
+C-Flat stats | raw_grad: 11.429030 | projected_target: 1.739885 | g_0: 1.739885 | g_1: 1.779959 | g_2: 1.833132 | final: 11.077773 | e_w_0: 0.010456 | e_w_1_2: 0.029763 | target_ratio: 0.7517
+[156/157]	0.0824 (0.0800)	0.0040 (0.0097)	0.722 (1.189)	87.50 (60.26)
+C-Flat stats | raw_grad: 11.871706 | projected_target: 2.102475 | g_0: 2.102475 | g_1: 2.187524 | g_2: 2.287061 | final: 11.414892 | e_w_0: 0.010705 | e_w_1_2: 0.030344 | target_ratio: 0.7517
+ * Train Acc 60.260
+ * Val Acc 60.600, Total time 0.31
+ * Val loss 1.145, Total time 0.00
+Epoch:11
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0788 (0.0788)	0.0085 (0.0085)	1.307 (1.307)	56.25 (56.25)
+C-Flat stats | raw_grad: 13.036421 | projected_target: 1.253307 | g_0: 1.253307 | g_1: 1.289724 | g_2: 1.357709 | final: 12.812006 | e_w_0: 0.009174 | e_w_1_2: 0.028493 | target_ratio: 0.7517
+[100/157]	0.0806 (0.0840)	0.0088 (0.0101)	1.188 (1.167)	62.50 (61.76)
+C-Flat stats | raw_grad: 11.607018 | projected_target: 1.744046 | g_0: 1.744046 | g_1: 1.798062 | g_2: 1.867109 | final: 11.302424 | e_w_0: 0.010914 | e_w_1_2: 0.030215 | target_ratio: 0.7517
+[156/157]	0.0788 (0.0825)	0.0032 (0.0099)	1.345 (1.182)	37.50 (60.94)
+C-Flat stats | raw_grad: 22.552626 | projected_target: 3.717015 | g_0: 3.717015 | g_1: 3.792519 | g_2: 3.863558 | final: 21.906576 | e_w_0: 0.011322 | e_w_1_2: 0.030860 | target_ratio: 0.7517
+ * Train Acc 60.940
+ * Val Acc 60.700, Total time 0.37
+ * Val loss 1.148, Total time 0.00
+Epoch:12
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0697 (0.0697)	0.0094 (0.0094)	1.020 (1.020)	62.50 (62.50)
+C-Flat stats | raw_grad: 10.840126 | projected_target: 1.562856 | g_0: 1.562856 | g_1: 1.605225 | g_2: 1.658094 | final: 10.550425 | e_w_0: 0.010551 | e_w_1_2: 0.029957 | target_ratio: 0.7517
+[100/157]	0.0694 (0.0806)	0.0088 (0.0095)	1.067 (1.171)	68.75 (61.32)
+C-Flat stats | raw_grad: 10.802406 | projected_target: 1.438218 | g_0: 1.438218 | g_1: 1.476308 | g_2: 1.539801 | final: 10.504056 | e_w_0: 0.009844 | e_w_1_2: 0.028973 | target_ratio: 0.7517
+[156/157]	0.0647 (0.0798)	0.0033 (0.0094)	1.197 (1.176)	75.00 (61.12)
+C-Flat stats | raw_grad: 19.664145 | projected_target: 2.352946 | g_0: 2.352946 | g_1: 2.389687 | g_2: 2.461228 | final: 19.045366 | e_w_0: 0.008640 | e_w_1_2: 0.027795 | target_ratio: 0.7517
+ * Train Acc 61.120
+ * Val Acc 62.700, Total time 0.34
+ * Val loss 1.132, Total time 0.00
+Epoch:13
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0903 (0.0903)	0.0089 (0.0089)	1.210 (1.210)	56.25 (56.25)
+C-Flat stats | raw_grad: 11.516942 | projected_target: 1.421590 | g_0: 1.421590 | g_1: 1.464729 | g_2: 1.541136 | final: 11.240423 | e_w_0: 0.009786 | e_w_1_2: 0.029006 | target_ratio: 0.7517
+[100/157]	0.0772 (0.0808)	0.0099 (0.0097)	0.956 (1.172)	68.75 (60.30)
+C-Flat stats | raw_grad: 10.566912 | projected_target: 1.592455 | g_0: 1.592455 | g_1: 1.642523 | g_2: 1.702396 | final: 10.255742 | e_w_0: 0.010512 | e_w_1_2: 0.030136 | target_ratio: 0.7517
+[156/157]	0.0616 (0.0797)	0.0027 (0.0097)	1.536 (1.177)	37.50 (60.12)
+C-Flat stats | raw_grad: 23.212957 | projected_target: 3.742007 | g_0: 3.742007 | g_1: 3.805711 | g_2: 3.877306 | final: 22.499680 | e_w_0: 0.010905 | e_w_1_2: 0.030159 | target_ratio: 0.7517
+ * Train Acc 60.120
+ * Val Acc 62.100, Total time 0.35
+ * Val loss 1.124, Total time 0.00
+Epoch:14
+LR: 1.25e-05
+LR: 0.00025
+LR: 0.000125
+Itr		Time		  Data		  Loss		Acc
+PLS-CFlat scope | mode: projected_layer_selective | scope: deep_plus_classifier | deep_rule: last_stage | target_numel: 8398346 | total_numel: 11172170 | ratio: 0.7517 | project_before: True | project_after: True | transform_count: 5
+[0/157]	0.0822 (0.0822)	0.0086 (0.0086)	1.273 (1.273)	59.38 (59.38)
+C-Flat stats | raw_grad: 11.360688 | projected_target: 1.443711 | g_0: 1.443711 | g_1: 1.478676 | g_2: 1.539712 | final: 11.032632 | e_w_0: 0.009351 | e_w_1_2: 0.028594 | target_ratio: 0.7517
+[100/157]	0.0800 (0.0829)	0.0103 (0.0098)	1.048 (1.181)	68.75 (60.18)
+C-Flat stats | raw_grad: 9.899726 | projected_target: 1.405027 | g_0: 1.405027 | g_1: 1.439205 | g_2: 1.496047 | final: 9.584223 | e_w_0: 0.009801 | e_w_1_2: 0.029081 | target_ratio: 0.7517
+[156/157]	0.0610 (0.0801)	0.0027 (0.0095)	1.645 (1.172)	12.50 (60.72)
+C-Flat stats | raw_grad: 31.136131 | projected_target: 3.854398 | g_0: 3.854398 | g_1: 3.931294 | g_2: 4.032920 | final: 30.367176 | e_w_0: 0.009731 | e_w_1_2: 0.029286 | target_ratio: 0.7517
+ * Train Acc 60.720
+ * Val Acc 61.500, Total time 0.30
+ * Val loss 1.128, Total time 0.00
+Classifier Optimizer is reset!
+reserving basis 5/27; cond: 396635.0625, radio:3.821456266450696e-05
+reserving basis 95/576; cond: 11216257.0, radio:3.902558091795072e-05
+reserving basis 232/576; cond: 825364.25, radio:0.001144512090831995
+reserving basis 239/576; cond: 1291308.5, radio:0.0007427525124512613
+reserving basis 314/576; cond: 300819.59375, radio:0.003791240742430091
+reserving basis 307/576; cond: 587718.3125, radio:0.001903303898870945
+reserving basis 832/1152; cond: 294406.1875, radio:0.008851947262883186
+reserving basis 45/64; cond: 9450.7763671875, radio:0.013981030322611332
+reserving basis 891/1152; cond: 222441.015625, radio:0.011557606980204582
+reserving basis 916/1152; cond: 177208.125, radio:0.015107228420674801
+reserving basis 891/1152; cond: 257967.859375, radio:0.010442966595292091
+reserving basis 1920/2304; cond: 329165.65625, radio:0.01498856395483017
+reserving basis 104/128; cond: 10889.4697265625, radio:0.022599421441555023
+reserving basis 1904/2304; cond: 330491.84375, radio:0.014918966218829155
+reserving basis 1900/2304; cond: 345752.21875, radio:0.014096968807280064
+reserving basis 1314/2304; cond: 1000734.9375, radio:0.004453110508620739
+reserving basis 1220/4608; cond: 7480808.5, radio:0.000495336833409965
+reserving basis 210/256; cond: 33332.265625, radio:0.01715155504643917
+reserving basis 993/4608; cond: 12943271.0, radio:0.0002500372938811779
+reserving basis 1146/4608; cond: 23160596.0, radio:0.00012955963029526174
+computing EWC
+validation split name: 1
+ * Val Acc 82.300, Total time 0.81
+ * Val loss 0.616, Total time 0.00
+**************************************************
+training split name: 1
+ * Val Acc 90.560, Total time 4.35
+ * Val loss 0.273, Total time 0.00
+**************************************************
+validation split name: 2
+ * Val Acc 56.500, Total time 0.74
+ * Val loss 1.228, Total time 0.00
+**************************************************
+training split name: 2
+ * Val Acc 54.680, Total time 4.30
+ * Val loss 1.283, Total time 0.00
+**************************************************
+validation split name: 3
+ * Val Acc 61.500, Total time 0.75
+ * Val loss 1.128, Total time 0.00
+**************************************************
+training split name: 3
+ * Val Acc 62.940, Total time 4.11
+ * Val loss 1.109, Total time 0.00
+**************************************************
+OrderedDict([('1', OrderedDict([('1', 83.3), ('2', 82.0), ('3', 82.3)])), ('2', OrderedDict([('2', 57.8), ('3', 56.5)])), ('3', OrderedDict([('3', 61.5)]))])
+Task 1 average acc: 83.3
+Task 1 backward transfer: 0
+Task 2 average acc: 69.9
+Task 2 backward transfer: -1.2999999999999972
+Task 3 average acc: 66.76666666666667
+Task 3 backward transfer: -1.1499999999999986
+===Summary of experiment repeats: 1 / 1 ===
+The last avg acc of all repeats: [66.76666667]
+The last bwt of all repeats: [-1.15]
+acc mean: 66.76666666666667 acc std: 0.0
+bwt mean: -1.1499999999999986 bwt std: 0.0

@@ -1,0 +1,6 @@
+2026-03-25T12:52:59+08:00 running_group=B gpu=5
+2026-03-25T12:52:59+08:00 running=deep_last_block_lambda0 gpu=5
+2026-03-25T13:08:08+08:00 running=deep_last_block_lambda0005 gpu=5
+2026-03-25T13:14:07+08:00 running_group=B gpu=4
+2026-03-25T13:14:07+08:00 running=deep_last_block_lambda0 gpu=4
+2026-03-25T16:46:41+08:00 running=deep_last_block_lambda0005 gpu=4

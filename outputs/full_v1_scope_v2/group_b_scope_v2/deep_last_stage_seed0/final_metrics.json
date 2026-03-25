@@ -1,0 +1,137 @@
+{
+  "acc_mean": 72.73999999999998,
+  "acc_std": 0.0,
+  "avg_final_acc": [
+    72.73999999999998
+  ],
+  "bwt_mean": -2.233333333333331,
+  "bwt_std": 0.0,
+  "command": "/home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 30 60 80 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --seed 0 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 10 --use_pls_cflat --cflat_rho 0.02 --cflat_lambda 0.02 --pls_cflat_debug --pls_cflat_mode layer_selective --cflat_target_scope deep --deep_layer_rule last_stage --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/full_v1_scope_v2/group_b_scope_v2/deep_last_stage_seed0",
+  "final_bwt": [
+    -2.233333333333331
+  ],
+  "repeat_metrics": [
+    {
+      "acc_table": {
+        "1": {
+          "1": 87.2,
+          "10": 86.4,
+          "2": 86.4,
+          "3": 86.4,
+          "4": 84.5,
+          "5": 86.5,
+          "6": 86.4,
+          "7": 86.2,
+          "8": 86.5,
+          "9": 84.6
+        },
+        "10": {
+          "10": 78.3
+        },
+        "2": {
+          "10": 70.3,
+          "2": 72.2,
+          "3": 69.2,
+          "4": 69.9,
+          "5": 70.6,
+          "6": 69.7,
+          "7": 67.6,
+          "8": 67.2,
+          "9": 70.6
+        },
+        "3": {
+          "10": 68.2,
+          "3": 73.8,
+          "4": 65.9,
+          "5": 68.8,
+          "6": 68.9,
+          "7": 66.4,
+          "8": 66.1,
+          "9": 69.1
+        },
+        "4": {
+          "10": 68.4,
+          "4": 72.0,
+          "5": 69.1,
+          "6": 67.9,
+          "7": 67.4,
+          "8": 69.3,
+          "9": 64.8
+        },
+        "5": {
+          "10": 72.5,
+          "5": 73.6,
+          "6": 71.4,
+          "7": 71.6,
+          "8": 72.9,
+          "9": 71.9
+        },
+        "6": {
+          "10": 71.2,
+          "6": 73.7,
+          "7": 69.7,
+          "8": 67.9,
+          "9": 72.8
+        },
+        "7": {
+          "10": 72.2,
+          "7": 72.4,
+          "8": 72.0,
+          "9": 66.6
+        },
+        "8": {
+          "10": 71.5,
+          "8": 72.8,
+          "9": 68.1
+        },
+        "9": {
+          "10": 68.4,
+          "9": 71.5
+        }
+      },
+      "avg_acc_history": [
+        87.2,
+        79.30000000000001,
+        76.46666666666668,
+        73.075,
+        73.72,
+        73.00000000000001,
+        71.61428571428573,
+        71.83749999999999,
+        71.11111111111111,
+        72.73999999999998
+      ],
+      "bwt_history": [
+        0,
+        -0.7999999999999972,
+        -1.8999999999999986,
+        -4.299999999999997,
+        -2.5500000000000043,
+        -2.899999999999994,
+        -3.9333333333333322,
+        -3.2857142857142856,
+        -3.650000000000004,
+        -2.233333333333331
+      ],
+      "final_avg_acc": 72.73999999999998,
+      "final_bwt": -2.233333333333331,
+      "repeat_index": 0,
+      "repeat_seed": 0,
+      "task_names": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "wall_clock_seconds": 13600.422612190247
+    }
+  ],
+  "seed": 0,
+  "use_cflat": false
+}

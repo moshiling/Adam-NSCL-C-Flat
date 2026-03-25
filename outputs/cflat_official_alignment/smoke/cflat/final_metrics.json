@@ -1,0 +1,44 @@
+{
+  "acc_mean": 37.0,
+  "acc_std": 0.0,
+  "avg_final_acc": [
+    37.0
+  ],
+  "bwt_mean": -3.3999999999999986,
+  "bwt_std": 0.0,
+  "command": "main.py --schedule 1 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 128 --model_name resnet18 --model_type resnet --workers 0 --print_freq 20 --max_tasks 2 --seed 0 --use_cflat --cflat_rho 0.05 --cflat_lambda 0.05 --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/cflat_official_alignment/smoke/cflat",
+  "final_bwt": [
+    -3.3999999999999986
+  ],
+  "repeat_metrics": [
+    {
+      "acc_table": {
+        "1": {
+          "1": 48.3,
+          "2": 44.9
+        },
+        "2": {
+          "2": 29.1
+        }
+      },
+      "avg_acc_history": [
+        48.3,
+        37.0
+      ],
+      "bwt_history": [
+        0,
+        -3.3999999999999986
+      ],
+      "final_avg_acc": 37.0,
+      "final_bwt": -3.3999999999999986,
+      "repeat_index": 0,
+      "task_names": [
+        "1",
+        "2"
+      ],
+      "wall_clock_seconds": 89.41133737564087
+    }
+  ],
+  "seed": 0,
+  "use_cflat": true
+}

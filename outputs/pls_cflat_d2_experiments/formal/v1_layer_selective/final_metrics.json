@@ -1,0 +1,52 @@
+{
+  "acc_mean": 66.76666666666667,
+  "acc_std": 0.0,
+  "avg_final_acc": [
+    66.76666666666667
+  ],
+  "bwt_mean": -0.75,
+  "bwt_std": 0.0,
+  "command": "/home/moshiling/Adam-NSCL-C-Flat/Adam-NSCL-main/main.py --schedule 5 10 15 --reg_coef 100 --model_lr 1e-4 --head_lr 1e-3 --svd_lr 5e-5 --bn_lr 5e-4 --svd_thres 10 --model_weight_decay 5e-5 --agent_type svd_based --agent_name svd_based --dataset CIFAR100 --gpuid 0 --repeat 1 --model_optimizer Adam --force_out_dim 0 --first_split_size 10 --other_split_size 10 --batch_size 32 --model_name resnet18 --model_type resnet --workers 0 --print_freq 100 --max_tasks 3 --seed 0 --use_pls_cflat --pls_cflat_mode layer_selective --cflat_target_scope deep_plus_classifier --deep_layer_rule last_stage --cflat_rho 0.02 --cflat_lambda 0.02 --pls_cflat_debug --output_dir /home/moshiling/Adam-NSCL-C-Flat/outputs/pls_cflat_d2_experiments/formal/v1_layer_selective",
+  "final_bwt": [
+    -0.75
+  ],
+  "repeat_metrics": [
+    {
+      "acc_table": {
+        "1": {
+          "1": 83.3,
+          "2": 82.0,
+          "3": 82.1
+        },
+        "2": {
+          "2": 56.9,
+          "3": 56.6
+        },
+        "3": {
+          "3": 61.6
+        }
+      },
+      "avg_acc_history": [
+        83.3,
+        69.45,
+        66.76666666666667
+      ],
+      "bwt_history": [
+        0,
+        -1.2999999999999972,
+        -0.75
+      ],
+      "final_avg_acc": 66.76666666666667,
+      "final_bwt": -0.75,
+      "repeat_index": 0,
+      "task_names": [
+        "1",
+        "2",
+        "3"
+      ],
+      "wall_clock_seconds": 1527.0589900016785
+    }
+  ],
+  "seed": 0,
+  "use_cflat": false
+}
